@@ -15,7 +15,12 @@ let sumFloor = Math.floor(applePrice) + Math.floor(blueberryPrice) + Math.floor(
 let sumFloorRound = Math.round(sumFloor/100) * 100;
 console.log(sumFloorRound);
 
-let isSumEven = sumFloor % 2 == 0;
+let isSumEven;
+if (Math.floor(sum) % 2 == 0) {
+  isSumEven = true;
+} else {
+  isSumEven = false;
+}
 console.log(isSumEven);
 
 let change = 500 - sum;
@@ -37,7 +42,7 @@ let allCalculations = `Максимальна ціна: ${maxPrice} <br>
 Сума цілих частин вартості кожного товару: ${sumFloor} <br>
 Сума вартості товарів округлена до сотень: ${sumFloorRound} <br>
 Сума всіх товарів парна: ${isSumEven} <br>
-Решта при оплаті товарів,якщо клієнт дає 500грн: ${change} <br>
+Решта при оплаті товарів, якщо клієнт дає 500грн: ${change} <br>
 Середнє значення цін(округлене до 2го знаку): ${average} <br>
 Сума до сплати разом зі знижкою: ${+sumWithDiscount.toFixed(2)} <br>
 Чистий прибуток: ${+profit.toFixed(2)}`;
