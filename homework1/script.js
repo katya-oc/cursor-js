@@ -8,35 +8,30 @@ console.log(maxPrice);
 const minPrice = Math.min(applePrice, blueberryPrice, cherryPrice);
 console.log(minPrice);
 
-let sum = applePrice + blueberryPrice + cherryPrice;
+const sum = applePrice + blueberryPrice + cherryPrice;
 console.log(sum);
 
-let sumFloor = Math.floor(applePrice) + Math.floor(blueberryPrice) + Math.floor(cherryPrice);
-let sumFloorRound = Math.round(sumFloor/100) * 100;
+const sumFloor = Math.floor(applePrice) + Math.floor(blueberryPrice) + Math.floor(cherryPrice);
+const sumFloorRound = Math.round(sumFloor/100) * 100;
 console.log(sumFloorRound);
 
-let isSumEven;
-if (Math.floor(sum) % 2 == 0) {
-  isSumEven = true;
-} else {
-  isSumEven = false;
-}
+const isSumEven = Math.floor(sum) % 2 === 0;
 console.log(isSumEven);
 
-let change = 500 - sum;
+const change = 500 - sum;
 console.log(change);
 
-let average = (sum/3).toFixed(2);
+const average = (sum/3).toFixed(2);
 console.log(+average);
 
-let randomDiscount = Math.random();
-let sumWithDiscount = sum - (sum * randomDiscount).toFixed(2);
+const randomDiscount = Math.random();
+const sumWithDiscount = sum - (sum * randomDiscount).toFixed(2);
 console.log(+sumWithDiscount.toFixed(2));
 
-let profit = sum/2 - (sum * randomDiscount).toFixed(2);
+const profit = sum/2 - (sum * randomDiscount).toFixed(2);
 console.log(profit);
 
-let allCalculations = `Максимальна ціна: ${maxPrice} <br>
+document.write(`Максимальна ціна: ${maxPrice} <br>
 Мінімальна ціна: ${minPrice} <br>
 Вартість усіх товарів: ${sum} <br>
 Сума цілих частин вартості кожного товару: ${sumFloor} <br>
@@ -45,6 +40,5 @@ let allCalculations = `Максимальна ціна: ${maxPrice} <br>
 Решта при оплаті товарів, якщо клієнт дає 500грн: ${change} <br>
 Середнє значення цін(округлене до 2го знаку): ${average} <br>
 Сума до сплати разом зі знижкою: ${+sumWithDiscount.toFixed(2)} <br>
-Чистий прибуток: ${+profit.toFixed(2)}`;
+Чистий прибуток: ${+profit.toFixed(2)}`);
 
-document.write(allCalculations);
