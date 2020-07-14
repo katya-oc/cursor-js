@@ -22,24 +22,24 @@ let change = 500 - sum;
 console.log(change);
 
 let average = (sum/3).toFixed(2);
-console.log(average);
+console.log(+average);
 
 let randomDiscount = Math.random();
 let sumWithDiscount = sum - (sum * randomDiscount).toFixed(2);
-console.log(sumWithDiscount);
+console.log(+sumWithDiscount.toFixed(2));
 
 let profit = sum/2 - (sum * randomDiscount).toFixed(2);
 console.log(profit);
 
-let allCalculations = `Максимальна ціна: ${maxPrice} \n
-Мінімальна ціна: ${minPrice} \n
-Вартість усіх товарів: ${sum} \n
-Сума цілих частин вартості кожного товару: ${sumFloor} \n
-Сума вартості товарів округлена до сотень: ${sumFloorRound} \n
-Сума всіх товарів парна: ${isSumEven} \n
-Решта при оплаті товарів,якщо клієнт дає 500грн: ${change} \n
-Середнє значення цін(округлене до 2го знаку): ${average} \n
-Сума до сплати разом зі знижкою: ${sumWithDiscount} \n
-Чистий прибуток: ${profit}`;
+let allCalculations = `Максимальна ціна: ${maxPrice} <br>
+Мінімальна ціна: ${minPrice} <br>
+Вартість усіх товарів: ${sum} <br>
+Сума цілих частин вартості кожного товару: ${sumFloor} <br>
+Сума вартості товарів округлена до сотень: ${sumFloorRound} <br>
+Сума всіх товарів парна: ${isSumEven} <br>
+Решта при оплаті товарів,якщо клієнт дає 500грн: ${change} <br>
+Середнє значення цін(округлене до 2го знаку): ${average} <br>
+Сума до сплати разом зі знижкою: ${+sumWithDiscount.toFixed(2)} <br>
+Чистий прибуток: ${+profit.toFixed(2)}`;
 
 document.write(allCalculations);
