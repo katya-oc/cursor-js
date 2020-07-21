@@ -3,8 +3,10 @@ let secondNumber = '';
 
 function getIntegerNumber(x) {
   while (Number.isInteger(x) !== true) {
-    if (x === '' || Number.isNaN(x) === true) {
+    if (x === '') {
       x = +prompt('Введіть число:');
+    } else if (Number.isNaN(x) === true) {
+      x = +prompt('Ви ввели не ціле число, спробуйте ще раз:');
     } else {
       x = +prompt('Ви ввели не ціле число, спробуйте ще раз:');
     }
