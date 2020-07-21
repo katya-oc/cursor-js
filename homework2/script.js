@@ -1,28 +1,29 @@
 let firstNumber = '';
 let secondNumber = '';
 
-while (Number.isInteger(firstNumber) !== true) {
-  if (Number.isNaN(firstNumber) === true) {
-    firstNumber = +prompt('Введіть число:');
-  } else {
-    firstNumber = +prompt('Ви ввели не ціле число, спробуйте ще раз:');
+function getIntegerNumber(x) {
+  while (Number.isInteger(x) !== true) {
+    if (x === '' || Number.isNaN(a) === true) {
+      x = +prompt('Введіть число:');
+    } else {
+      x = +prompt('Ви ввели не ціле число, спробуйте ще раз:');
+    }
   }
+  return x;
 }
+
+firstNumber = getIntegerNumber(firstNumber);
 console.log(firstNumber);
 
-while (Number.isInteger(secondNumber) !== true) {
-  if (Number.isNaN(secondNumber) === true) {
-    fsecondNumber = +prompt('Введіть ще одне число:');
-  } else {
-    secondNumber = +prompt('Ви ввели не ціле число, спробуйте ще раз:');
-  }
-}
+secondNumber = getIntegerNumber(secondNumber);
 console.log(secondNumber);
 
 const shouldSkipEven = confirm('Чи хочете пропустити парні числа при складанні чисел?');
 
 const maxNumber = Math.max(firstNumber, secondNumber);
+console.log(maxNumber);
 const minNumber = Math.min(firstNumber, secondNumber);
+console.log(minNumber);
 
 let sum = 0;
 let i = 0;
@@ -35,3 +36,8 @@ for (i = minNumber; i <= maxNumber; i++) {
 }
 
 console.log(sum);
+
+document.write(`Перше число: ${firstNumber} <br> 
+Друге число: ${secondNumber} <br>
+Пропустити парні числа: ${shouldSkipEven} <br>
+Сума: ${sum}`);
