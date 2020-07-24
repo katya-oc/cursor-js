@@ -51,7 +51,7 @@ function convertCurrency(value) {
   let result = 0;
   if (value.includes('$')) {
     result = (parseInt(value) * 27.8).toFixed(2) + '' + 'грн';
-  } else if (value.includes('uah'.toUpperCase())) {
+  } else if (value.toLowerCase().includes('uah')) {
     result = (parseInt(value) * 0.036).toFixed(2) + '' + '$';
   } else {
     result = 'Invalid value';
@@ -106,7 +106,7 @@ document.write(`Функція, що форматує ім'я (з великої
 Заробітна плата після податків: ${showSalaryAfterTax(18000, 18, 1.5)} <br>
 Випадкове ціле число з діапазону: ${getRandomInteger(15, 45)} <br>
 Скільки повторюється якась літера: ${countLetter('green', 'e')} <br>
-Долари в гривні і навпаки: ${convertCurrency('456$')} <br>
+Долари в гривні і навпаки: ${convertCurrency('50644Uah')} <br>
 Випадковий пароль: ${randomPassword()} <br>
 Видаляє букву з речення: ${deleteLetters('s', 'sassy')} <br>
 Чи слово/речення падіндром: ${isPalyndrom('Я несу гусеня')} <br>
