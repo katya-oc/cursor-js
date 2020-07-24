@@ -82,7 +82,7 @@ function isPalyndrom(str) {
 function randomPassword(passlng = 8) {
   let pass = '';
   for (let i = 0; i < passlng; i++) {
-    pass += Math.floor(Math.random() * 10);
+    pass += Math.floor(Math.random() * 9);
   }
   return pass;
 }
@@ -102,7 +102,7 @@ function deleteDuplicateLetter(str) {
 
 document.write(`Функція, що форматує ім'я (з великої літери): ${formatName('vAlEriYa')} <br>
 Найбільша цифра з числа: ${getMaxDigit(468556)} <br>
-Ступінь числа: ${getValueToPower(4, 7)} <br>
+Ступінь числа: ${getValueToPower(5, 5)} <br>
 Заробітна плата після податків: ${showSalaryAfterTax(18000, 18, 1.5)} <br>
 Випадкове ціле число з діапазону: ${getRandomInteger(15, 45)} <br>
 Скільки повторюється якась літера: ${countLetter('green', 'e')} <br>
