@@ -7,8 +7,7 @@ function formatName(name) {
 //Найбільша цифра з числа
 
 function getMaxDigit(numb) {
-  let array = Math.abs(numb).toString().split('');
-  return Math.max(...array);
+  return Math.max(...Math.abs(numb).toString());
 }
 
 //Cтупіть числа
@@ -32,7 +31,7 @@ function showSalaryAfterTax(salary, tax1, tax2) {
 //Рандомне ціле
 
 function getRandomInteger(numb1, numb2) {
-  return Math.floor(Math.random() * (numb2 - numb1)) + numb1;
+  return Math.round(Math.random() * (numb2 - numb1)) + numb1;
 }
 
 //Повторювання букви
@@ -63,7 +62,8 @@ function convertCurrency(value) {
 
 function deleteLetters(letter, str) {
   for (let i = 0; i < str.length; i++) {
-    str = str.replace(letter, '');
+
+    str = str.toLowerCase().replace(letter.toLowerCase(), '');
   }
   return str;
 }
@@ -82,7 +82,7 @@ function isPalyndrom(str) {
 function randomPassword(passlng = 8) {
   let pass = '';
   for (let i = 0; i < passlng; i++) {
-    pass += Math.floor(Math.random() * 9);
+    pass += Math.round(Math.random() * 9);
   }
   return pass;
 }
@@ -104,10 +104,10 @@ document.write(`Функція, що форматує ім'я (з великої
 Найбільша цифра з числа: ${getMaxDigit(468556)} <br>
 Ступінь числа: ${getValueToPower(5, 5)} <br>
 Заробітна плата після податків: ${showSalaryAfterTax(18000, 18, 1.5)} <br>
-Випадкове ціле число з діапазону: ${getRandomInteger(15, 45)} <br>
+Випадкове ціле число з діапазону: ${getRandomInteger(1, 2)} <br>
 Скільки повторюється якась літера: ${countLetter('green', 'e')} <br>
 Долари в гривні і навпаки: ${convertCurrency('50644Uah')} <br>
 Випадковий пароль: ${randomPassword()} <br>
-Видаляє букву з речення: ${deleteLetters('s', 'sassy')} <br>
+Видаляє букву з речення: ${deleteLetters('s', 'saSsy')} <br>
 Чи слово/речення падіндром: ${isPalyndrom('Я несу гусеня')} <br>
 Видаляє повторювані букви з речення: ${deleteDuplicateLetter('Have a nice day')}`);
