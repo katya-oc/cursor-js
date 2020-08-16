@@ -47,7 +47,7 @@ function getMySalary() {
   const min = 1500;
   const max = 2000;
 
-  setInterval(() => {
+  let timer = setInterval(() => {
     let salary = Math.floor(Math.random() * (max - min + 1) + min);
     randomSalary.salary = salary;
     const taxes = +(salary * this.tax).toFixed(0);
@@ -57,6 +57,9 @@ function getMySalary() {
     console.log(`Рандомний об'єкт з зп, податками і профітом:`, randomSalary);
   }, 10000);
 
+  setTimeout(() => {
+    clearInterval(timer)
+  }, 50000);
 }
 
 console.log(getMySalary.call(ukraine));
