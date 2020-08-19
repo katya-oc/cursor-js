@@ -30,7 +30,9 @@ function getMiddleTaxes() {
   return +(this.tax * this.middleSalary).toFixed(0);
 }
 
-console.log(`Середній податок у вибраній країні:`, getMiddleTaxes.call(ukraine));
+console.log(`Середній податок в Україні:`, getMiddleTaxes.call(ukraine));
+console.log(`Середній податок у Латвії:`, getMiddleTaxes.call(latvia));
+console.log(`Середній податок у Литві:`, getMiddleTaxes.call(litva));
 
 //Всі податки 
 
@@ -38,7 +40,9 @@ function getTotalTaxes() {
   return +(this.tax * this.middleSalary * this.vacancies).toFixed(0);
 }
 
-console.log(`Усі податки у вибраній країні:`, getTotalTaxes.call(ukraine));
+console.log(`Усі податки в Україні :`, getTotalTaxes.call(ukraine));
+console.log(`Усі податки у Латвії:`, getTotalTaxes.call(latvia));
+console.log(`Усі податки у Литві:`, getTotalTaxes.call(litva));
 
 //Об'єкт з профітом
 
