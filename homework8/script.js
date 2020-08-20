@@ -52,16 +52,19 @@ console.log('студента поновили, його оцінки:', student
 class BudgetStudent extends Student {
   constructor(university, course, fullName) {
     super(university, course, fullName);
-    setTimeout(this.getScolarship, 10000);
+    this.getScolarship();
   }
 
   getScolarship() {
-    if (this._learning && this.getAverageMark() >= 4) {
-      return console.log('Ви отримали 1400 грн стипендії.')
-    } else {
-      return console.log('Ти на щось розраховував? Старайся краще! А поки стипендії нема:(');
-    }
+    setTimeout( ()=> {
+      if (this._learning && this.getAverageMark() >= 4) {
+        return console.log('Ви отримали 1400 грн стипендії.')
+      } else {
+        return console.log('Ти на щось розраховував? Старайся краще! А поки стипендії нема:(');
+      }
+    }, 10000);
   }
+
 }
 
 const budgetStudent = new BudgetStudent('КПІ', '2', 'Сергій Кочурба');
