@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(58, 58, 58);
+}
+
+.wrapper {
+  width: 650px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 50px 50px;
+  position: relative;
+}
+
+.table {
+  margin-top: 140px;
+}
+
+th {
+  border: 1px solid black;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  background-color: rgb(224, 224, 224);
+  vertical-align: middle;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.white {
+  width: 78px;
+  height: 370px;
+  border: 1px solid black;
+  border-radius: 0 0 8px 8px;
+  margin-right: 1px;
+  background-color: white;
+  transition: all 2s;
+}
+
+.black {
+  width: 50px;
+  height: 234px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0 0 5px 5px;
+  margin: 0 1px;
+  position: absolute;
+  box-shadow: 0 0 6px 7px rgba(116, 116, 116, 0.8) inset;
+  transition: all 2s;
+}
+
+.bl1 {
+  left: 101px;
+}
+
+.bl2 {
+  left: 181px;
+}
+
+.bl3 {
+  right: 262px;
+}
+
+.bl4 {
+  right: 182px;
+}
+
+.bl5 {
+  right: 104px;
+}
+
+.white:hover {
+  box-shadow: 0 0 7px 3px rgba(143, 63, 235, 0.8);
+}
+
+.black:hover {
+  box-shadow: 0 0 7px 3px rgb(214, 142, 255) inset;
+}
+
+.playing {
+  background: linear-gradient(white 60%, rgb(71, 71, 71));
+}
+
+.playingblack {
+  background: linear-gradient(rgb(116, 116, 116), black 60%);
+  box-shadow: 0 0 6px 7px rgba(116, 116, 116, 0.4) inset;
+}
